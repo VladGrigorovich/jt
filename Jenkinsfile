@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'npm i && npm test'
+                sh 'sudo chown -R 502:20 "/.npm" && npm i && npm test'
             }
         }
     }
