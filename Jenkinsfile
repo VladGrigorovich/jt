@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'chown -R 502:20 "/.npm" && npm i && npm test'
+                sh 'npm i && npm test'
             }
         }
     }
