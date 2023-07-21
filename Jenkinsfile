@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'npm i && npm test'
+                sh 'cat /var/run/docker.sock && npm i && npm test'
             }
         }
     }
