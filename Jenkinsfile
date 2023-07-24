@@ -1,7 +1,7 @@
 pipeline {
     agent { docker { 
         image 'node:18.16.1-alpine3.18'
-        args '-v \'/var/run/docker.sock:/var/run/docker.sock\' -p 9229:9229'
+        args '-v \'/var/run/docker.sock:/var/run/docker.sock\' -p 127.0.0.1:9229:9229'
     } }
     environment { NPM_CONFIG_CACHE = "${WORKSPACE}/.npm" }
     stages {
