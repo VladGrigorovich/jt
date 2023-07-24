@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'ls /var/run && npm i && npm test'
+                sh 'ln -sf "$HOME/.docker/run/docker.sock" /var/run/docker.sock && npm i && npm test'
             }
         }
     }
